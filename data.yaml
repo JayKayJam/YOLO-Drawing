@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['cap']
+
+roboflow:
+  workspace: jam-workspace
+  project: coke-plastic-cap
+  version: 2
+  license: Public Domain
+  url: https://universe.roboflow.com/jam-workspace/coke-plastic-cap/dataset/2
