@@ -1,0 +1,21 @@
+button {
+  border-color: #000000;
+  background-color: #ffffff;
+  width: 75px;
+  height: 75px;
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+#eraseButton {
+  background-color: #e3e3e3;
+}
+
+#redButton {
+  background-color: #ff0000;
+}
+
+#greenButton {
+  background-color: #00ff00;
+}

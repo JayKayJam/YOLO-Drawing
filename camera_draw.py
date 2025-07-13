@@ -5,8 +5,8 @@ from tkinter import ttk
 from flask import Flask, render_template
 
 # How big we want the drawing array to be
-xZones = 32
-yZones = 32
+xZones = 64
+yZones = 64
 
 running = True
 LEDarray = [[0]*yZones for _ in range(xZones)]  # initialize empty array
@@ -63,7 +63,7 @@ def detect():
     k = 0
 
     try:
-        results = model.predict(source="0", show=True, stream=True, conf=0.4)
+        results = model.predict(source="0", show=True, stream=True, conf=0.6)
 
         for result in results:
             if(running == False):
@@ -71,7 +71,7 @@ def detect():
 
             for box in result.boxes:
                 conf = box.conf.item()
-                if (conf >= 0.4):
+                if (conf >= 0.6):
                     x1 = float(box.xyxy[0][0])
                     y1 = float(box.xyxy[0][1])
                     x2 = float(box.xyxy[0][2])
